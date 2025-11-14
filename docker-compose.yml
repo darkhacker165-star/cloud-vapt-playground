@@ -1,0 +1,15 @@
+services:
+  juice-shop:
+    image: bkimminich/juice-shop
+    ports:
+      - "9090:3000"
+
+  dvwa:
+    image: vulnerables/web-dvwa
+    ports:
+      - "8080:80"
+
+  vulnerable-api:
+    image: bkimminich/juice-shop   # using Juice Shop as API for testing
+    ports:
+      - "3000:3000"
